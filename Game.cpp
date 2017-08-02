@@ -1,33 +1,23 @@
 #include "Game.h"
+#include <iostream>
 
-/// <summary>
-/// @author RP
-/// @date June 2016
-/// @version 1.0
-/// 
-/// </summary>
+// Define ScreenSize statics height and width.
+int ScreenSize::s_height = 1440;
+int ScreenSize::s_width = 900;
 
 // Updates per milliseconds
 static double const MS_PER_UPDATE = 10.0;
 
-/// <summary>
-/// @brief Default constructor.
-/// 
-/// Create a new window and initialise member objects.
-/// </summary>
-/// 
+////////////////////////////////////////////////////////////
 Game::Game()
-: m_window(sf::VideoMode(1440, 900, 32), "SFML Playground", sf::Style::Default)
+	: m_window(sf::VideoMode(ScreenSize::height(), ScreenSize::width(), 32), "SFML Playground", sf::Style::Default)
+{
 
-{	
-	
+	m_window.setVerticalSyncEnabled(true);
+
 }
 
-
-
-/// <summary>
-/// Main game entry point - runs until user quits.
-/// </summary>
+////////////////////////////////////////////////////////////
 void Game::run()
 {
 	sf::Clock clock;
@@ -52,14 +42,7 @@ void Game::run()
 	}
 }
 
-
-
-/// <summary>
-/// @brief Check for events
-/// 
-/// Allows window to function and exit. 
-/// Events are passed on to the Game::processGameEvents() method
-/// </summary>
+////////////////////////////////////////////////////////////
 void Game::processEvents()
 {
 	sf::Event event;
@@ -73,12 +56,7 @@ void Game::processEvents()
 	}
 }
 
-/// <summary>
-/// @brief Handle all user input.
-/// 
-/// Detect and handle keyboard input.
-/// </summary>
-/// <param name="event">system event</param>
+////////////////////////////////////////////////////////////
 void Game::processGameEvents(sf::Event& event)
 {
 	// check if the event is a a mouse button release
@@ -98,25 +76,20 @@ void Game::processGameEvents(sf::Event& event)
 	}
 }
 
-/// <summary>
-/// Method to handle all game updates
-/// </summary>
-/// <param name="time">update delta time</param>
+////////////////////////////////////////////////////////////
 void Game::update(double dt)
 {
-	
+
 }
 
-
-/// <summary>
-/// @brief draw the window for the game.
-/// 
-/// </summary>
+////////////////////////////////////////////////////////////
 void Game::render()
 {
 	m_window.clear(sf::Color(0, 0, 0, 0));
-
 	m_window.display();
 }
+
+
+
 
 

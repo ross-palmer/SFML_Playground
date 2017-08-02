@@ -1,6 +1,2 @@
-﻿  main.cpp
-  Game.cpp
-c:\users\ross\documents\visual studio 2015\projects\sfml_playground\game.cpp(47): warning C4244: '-=': conversion from 'const double' to 'sf::Int32', possible loss of data
-  Generating Code...
-  SFML_Playground.vcxproj -> C:\Users\Ross\Documents\Visual Studio 2015\Projects\SFML_Playground\Debug\SFML_Playground.exe
-  SFML_Playground.vcxproj -> C:\Users\Ross\Documents\Visual Studio 2015\Projects\SFML_Playground\Debug\SFML_Playground.pdb (Partial PDB)
+﻿  SFML_Playground.vcxproj -> C:\Users\Ross\Documents\Visual Studio 2017\Projects\SFML_Playground\Debug\SFML_Playground.exe
+  SFML_Playground.vcxproj -> C:\Users\Ross\Documents\Visual Studio 2017\Projects\SFML_Playground\Debug\SFML_Playground.pdb (Partial PDB)

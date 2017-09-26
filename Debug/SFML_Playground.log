@@ -1,2 +1,6 @@
-﻿  SFML_Playground.vcxproj -> C:\Users\Ross\Documents\Visual Studio 2017\Projects\SFML_Playground\Debug\SFML_Playground.exe
-  SFML_Playground.vcxproj -> C:\Users\Ross\Documents\Visual Studio 2017\Projects\SFML_Playground\Debug\SFML_Playground.pdb (Partial PDB)
+﻿cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  Game.cpp
+g:\sfml_playground\game.cpp : fatal error C1041: cannot open program database 'G:\SFML_Playground\Debug\vc141.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  main.cpp
+g:\sfml_playground\main.cpp : fatal error C1041: cannot open program database 'G:\SFML_Playground\Debug\vc141.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  Generating Code...

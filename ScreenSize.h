@@ -1,20 +1,9 @@
 #pragma once
 
-class ScreenSize
+struct ScreenSize
 {
 public:
-	static int height()
-	{
-		return s_height;
-	}
+	static const int s_width{ 900 };
 
-	static int width()
-	{
-		return s_width;
-	}
-
-private:
-	static int s_width;
-
-	static int s_height;
+	static const int s_height{ 1440 };
 };

@@ -1,20 +1,14 @@
 #include "Game.h"
 #include <iostream>
 
-// Define ScreenSize statics height and width.
-int ScreenSize::s_height = 1440;
-int ScreenSize::s_width = 900;
-
 // Updates per milliseconds
 static double const MS_PER_UPDATE = 10.0;
 
 ////////////////////////////////////////////////////////////
 Game::Game()
-	: m_window(sf::VideoMode(ScreenSize::height(), ScreenSize::width(), 32), "SFML Playground", sf::Style::Default)
+	: m_window(sf::VideoMode(ScreenSize::s_height, ScreenSize::s_width, 32), "SFML Playground", sf::Style::Default)
 {
-
 	m_window.setVerticalSyncEnabled(true);
-
 }
 
 ////////////////////////////////////////////////////////////

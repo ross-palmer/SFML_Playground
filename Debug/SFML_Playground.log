@@ -1,6 +1,6 @@
-﻿cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+﻿  main.cpp
   Game.cpp
-g:\sfml_playground\game.cpp : fatal error C1041: cannot open program database 'G:\SFML_Playground\Debug\vc141.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-  main.cpp
-g:\sfml_playground\main.cpp : fatal error C1041: cannot open program database 'G:\SFML_Playground\Debug\vc141.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+c:\users\palmerr\documents\visual studio 2017\projects\sfml_playground\game.cpp(31): warning C4244: '-=': conversion from 'const double' to 'sf::Int32', possible loss of data
   Generating Code...
+  SFML_Playground.vcxproj -> C:\Users\palmerr\Documents\Visual Studio 2017\Projects\SFML_Playground\Debug\SFML_Playground.exe
+  SFML_Playground.vcxproj -> C:\Users\palmerr\Documents\Visual Studio 2017\Projects\SFML_Playground\Debug\SFML_Playground.pdb (Partial PDB)

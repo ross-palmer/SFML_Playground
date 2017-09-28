@@ -30,7 +30,7 @@ void Game::run()
 			update(MS_PER_UPDATE);
 			lag -= MS_PER_UPDATE;
 		}
-		update(lag);
+		update(MS_PER_UPDATE);
 
 		render();
 	}

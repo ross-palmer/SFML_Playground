@@ -6,7 +6,7 @@ static double const MS_PER_UPDATE = 10.0;
 
 ////////////////////////////////////////////////////////////
 Game::Game()
-	: m_window(sf::VideoMode(ScreenSize::s_height, ScreenSize::s_width, 32), "SFML Playground", sf::Style::Default)
+	: m_window(sf::VideoMode(ScreenSize::s_width, ScreenSize::s_height, 32), "SFML Playground", sf::Style::Default)
 {
 	m_window.setVerticalSyncEnabled(true);
 }

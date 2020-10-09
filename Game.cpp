@@ -27,10 +27,10 @@ void Game::run()
 
 		while (lag > MS_PER_UPDATE)
 		{
-			update(MS_PER_UPDATE);
+			update(lag);
 			lag -= MS_PER_UPDATE;
 		}
-		update(MS_PER_UPDATE);
+		update(lag);
 
 		render();
 	}

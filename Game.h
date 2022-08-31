@@ -1,11 +1,18 @@
 #pragma once
 
+// If VS Debug build is enabled, then any block of code enclosed within 
+//  the preprocessor directive #ifdef TEST_FPS is compiled and executed.
+#ifdef _DEBUG
+#define TEST_FPS
+#endif // _DEBUG
+
 #include <SFML/Graphics.hpp>
+#include <string>
 #include "ScreenSize.h"
 
 /// <summary>
 /// @author RP
-/// @date September 2020
+/// @date September 2022
 /// @version 1.0
 /// 
 /// </summary>
@@ -32,15 +39,20 @@ public:
 	/// @brief the main game loop.
 	/// 
 	/// A complete loop involves processing SFML events, updating and drawing all game objects.
-	/// The actual elapsed time for a single game loop results (lag) is stored. If this value is 
-	///  greater than the notional time for one loop (MS_PER_UPDATE), then additional updates will be 
-	///  performed until the lag is less than the notional time for one loop.
-	/// The target is one update and one render cycle per game loop, but slower PCs may 
-	///  perform more update than render operations in one loop.
+	/// The actual elapsed time for a single game loop is calculated. If this value is 
+	///  greater than the target time for one loop (1 / 60), then (and only then) is an update 
+	///  operation performed.
+	/// The target is at least one update and one render cycle per game loop, but typically 
+	///  more render than update operations will be performed as we expect our game loop to
+	///  complete in less than the target time.
 	/// </summary>
 	void run();
 
 protected:
+	/// <summary>
+	/// @brief Once-off game initialisation code
+	/// </summary>	
+	void init();
 	/// <summary>
 	/// @brief Placeholder to perform updates to all game objects.
 	/// </summary>
@@ -66,6 +78,17 @@ protected:
 	/// <param name="event">system event</param>
 	void processGameEvents(sf::Event&);
 
+	// Font used for all text
+	sf::Font m_arialFont;
 	// main window
 	sf::RenderWindow m_window;
+
+#ifdef TEST_FPS
+	sf::Text x_updateFPS;					// text used to display updates per second.
+	sf::Text x_drawFPS;						// text used to display draw calls per second.
+	sf::Time x_secondTime {sf::Time::Zero};	// counter used to establish when a second has passed.
+	int x_updateFrameCount{ 0 };			// updates per second counter.
+	int x_drawFrameCount{ 0 };				// draws per second counter.
+#endif // TEST_FPS
+
 };

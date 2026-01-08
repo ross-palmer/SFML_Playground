@@ -102,12 +102,12 @@ void Game::processKeyPressed(const std::optional<sf::Event>& t_event)
 	sf::Event::KeyPressed const* keyPressed = t_event->getIf<sf::Event::KeyPressed>();
 	if (keyPressed != nullptr)
 	{
-		switch (keyPressed->scancode)
+		switch (keyPressed->code)
 		{
-			case sf::Keyboard::Scancode::Escape:
+			case sf::Keyboard::Key::Escape:
 				m_window.close();
 				break;
-			case sf::Keyboard::Scancode::Up:
+			case sf::Keyboard::Key::Up:
 				// Up key was pressed...
 				break;
 			default:
